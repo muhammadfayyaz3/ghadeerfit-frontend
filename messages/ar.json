@@ -1,0 +1,52 @@
+{
+  "common": {
+    "appName": "GhadeerFit",
+    "loading": "جاري التحميل...",
+    "noResults": "لم يتم العثور على نتائج",
+    "error": "حدث خطأ",
+    "goBack": "العودة",
+    "backToHome": "العودة إلى الصفحة الرئيسية",
+    "showMore": "عرض المزيد",
+    "showLess": "عرض أقل"
+  },
+  "search": {
+    "placeholder": "البحث عن مقاطع الفيديو...",
+    "clear": "مسح البحث"
+  },
+  "header": {
+    "notifications": "الإشعارات",
+    "logo": "GhadeerFit"
+  },
+  "home": {
+    "searchPlaceholder": "البحث عن مقاطع الفيديو...",
+    "loadError": "فشل تحميل مقاطع الفيديو. يرجى المحاولة مرة أخرى لاحقًا.",
+    "endOfList": "لقد وصلت إلى النهاية!",
+    "noVideosFound": "لم يتم العثور على مقاطع فيديو",
+    "tryAdjusting": "حاول تعديل البحث أو المرشحات",
+    "checkBackLater": "تحقق مرة أخرى لاحقًا للحصول على محتوى جديد!"
+  },
+  "video": {
+    "invalidUrl": "رابط يوتيوب غير صالح"
+  },
+  "categories": {
+    "filterBy": "تصفية حسب {category}"
+  },
+  "notifications": {
+    "title": "الإشعارات",
+    "noNotifications": "لا توجد إشعارات",
+    "viewAll": "عرض جميع الإشعارات",
+    "addNotification": "إضافة إشعار",
+    "createNew": "إنشاء إشعار جديد",
+    "createDescription": "إنشاء إشعار جديد للمستخدمين",
+    "notificationTitle": "العنوان",
+    "titlePlaceholder": "عنوان الإشعار",
+    "description": "الوصف",
+    "descriptionPlaceholder": "وصف الإشعار",
+    "create": "إنشاء",
+    "creating": "جاري الإنشاء...",
+    "notFound": "لم يتم العثور على الإشعار",
+    "backToNotifications": "العودة إلى الإشعارات",
+    "noNotificationsYet": "لا توجد إشعارات حتى الآن. أنشئ أول إشعار لك!"
+  }
+}
+

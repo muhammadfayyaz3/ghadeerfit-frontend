@@ -1,0 +1,52 @@
+{
+  "common": {
+    "appName": "GhadeerFit",
+    "loading": "Loading...",
+    "noResults": "No results found",
+    "error": "An error occurred",
+    "goBack": "Go Back",
+    "backToHome": "Back to Home",
+    "showMore": "Show more",
+    "showLess": "Show fewer"
+  },
+  "search": {
+    "placeholder": "Search for videos...",
+    "clear": "Clear search"
+  },
+  "header": {
+    "notifications": "Notifications",
+    "logo": "GhadeerFit"
+  },
+  "home": {
+    "searchPlaceholder": "Search for videos...",
+    "loadError": "Failed to load videos. Please try again later.",
+    "endOfList": "You've reached the end!",
+    "noVideosFound": "No videos found",
+    "tryAdjusting": "Try adjusting your search or filters",
+    "checkBackLater": "Check back later for new content!"
+  },
+  "video": {
+    "invalidUrl": "Invalid YouTube URL"
+  },
+  "categories": {
+    "filterBy": "Filter by {category}"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "noNotifications": "No notifications",
+    "viewAll": "View all notifications",
+    "addNotification": "Add Notification",
+    "createNew": "Create New Notification",
+    "createDescription": "Create a new notification for users",
+    "notificationTitle": "Title",
+    "titlePlaceholder": "Notification title",
+    "description": "Description",
+    "descriptionPlaceholder": "Notification description",
+    "create": "Create",
+    "creating": "Creating...",
+    "notFound": "Notification not found",
+    "backToNotifications": "Back to Notifications",
+    "noNotificationsYet": "No notifications yet. Create your first notification!"
+  }
+}
+
