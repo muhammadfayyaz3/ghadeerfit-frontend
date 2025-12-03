@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  # Frontend Web Application
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+      args:
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:5000/api}
+    container_name: ghadeerfit-frontend-prod
+    environment:
+      NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:5000/api}
+    ports:
+      - "3000:3000"
+    networks:
+      - ghadeerfit-network-prod
+    restart: unless-stopped
+
+networks:
+  ghadeerfit-network-prod:
+    driver: bridge
+
