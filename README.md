@@ -291,10 +291,15 @@ The production build creates an optimized version in the `.next` directory:
 
 ### Vercel (Recommended)
 
+Deploy your frontend to Vercel with automatic deployments from GitHub.
+
+**Quick Steps:**
 1. Push your code to GitHub
 2. Import your repository in Vercel
-3. Set environment variables
+3. Set environment variables (especially `NEXT_PUBLIC_API_URL`)
 4. Deploy
+
+**For detailed deployment instructions, see [VERCEL_DEPLOYMENT.md](./VERCEL_DEPLOYMENT.md)**
 
 ### Docker Production
 
