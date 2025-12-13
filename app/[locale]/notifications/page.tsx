@@ -18,7 +18,7 @@ interface Notification {
 
 export default function NotificationsPage() {
   const { t, i18n } = useTranslation();
-  const locale = i18n.language || 'en';
+  const locale = i18n.language || 'ar';
   const router = useRouter();
 
   const { data: notifications, isLoading } = useQuery({

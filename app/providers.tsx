@@ -24,7 +24,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
   // Detect language from URL
   useEffect(() => {
     const langMatch = pathname?.match(/^\/(ar|en)/);
-    const detectedLang = langMatch ? langMatch[1] : 'en';
+    const detectedLang = langMatch ? langMatch[1] : 'ar';
     
     if (i18n.language !== detectedLang) {
       i18n.changeLanguage(detectedLang);

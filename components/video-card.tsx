@@ -98,7 +98,7 @@ export default function VideoCard({
           <div className="relative w-full aspect-video min-w-[200px]">
             {/* Skeleton loader */}
             {isPlayerLoading && (
-              <div className="absolute inset-0 z-10 bg-gradient-to-b from-gray-300 to-gray-100 animate-pulse">
+              <div className="absolute inset-0 z-10 bg-[#f5e1e0] animate-pulse">
               </div>
             )}
             {/* YouTube Player */}

@@ -25,9 +25,9 @@ interface Notification {
 
 export default function NotificationBell() {
   const { t, i18n } = useTranslation();
-  const locale = i18n.language || 'en';
+  const locale = i18n.language || 'ar';
   const router = useRouter();
-  const [lastSeenCount, setLastSeenCount] = useState<number>(0);
+  const [lastSeenNotificationId, setLastSeenNotificationId] = useState<number | null>(null);
   const [hasNewNotifications, setHasNewNotifications] = useState<boolean>(false);
   
   // Fetch notifications with auto-refresh every 30 seconds
@@ -46,23 +46,32 @@ export default function NotificationBell() {
   // Check for new notifications
   useEffect(() => {
     if (notifications && notifications.length > 0) {
-      // If we have more notifications than last time we checked, show the indicator
-      if (lastSeenCount > 0 && notifications.length > lastSeenCount) {
-        setHasNewNotifications(true);
-      }
-      // Initialize lastSeenCount on first load
-      if (lastSeenCount === 0) {
-        setLastSeenCount(notifications.length);
+      // Get the most recent notification ID (first one in the array, assuming sorted by newest first)
+      const mostRecentId = notifications[0]?.id;
+      
+      if (mostRecentId) {
+        // Initialize on first load
+        if (lastSeenNotificationId === null) {
+          setLastSeenNotificationId(mostRecentId);
+          setHasNewNotifications(false);
+        } 
+        // Check if there's a new notification (different ID means new notification)
+        else if (mostRecentId !== lastSeenNotificationId) {
+          setHasNewNotifications(true);
+        }
       }
     }
-  }, [notifications, lastSeenCount]);
+  }, [notifications, lastSeenNotificationId]);
 
   // Handle when user opens the notification dropdown
   const handleOpenChange = (open: boolean) => {
-    if (open && notifications) {
-      // Mark notifications as seen
-      setHasNewNotifications(false);
-      setLastSeenCount(notifications.length);
+    if (open && notifications && notifications.length > 0) {
+      // Mark notifications as seen - update to the most recent notification ID
+      const mostRecentId = notifications[0]?.id;
+      if (mostRecentId) {
+        setLastSeenNotificationId(mostRecentId);
+        setHasNewNotifications(false);
+      }
     }
   };
 
@@ -71,7 +80,7 @@ export default function NotificationBell() {
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="icon" className="relative">
           <Bell className="h-7 w-7" />
-          {recentNotifications.length > 0 && hasNewNotifications && (
+          {hasNewNotifications && (
             <span className="absolute top-1 right-1 h-2 w-2 bg-red-500 rounded-full" />
           )}
         </Button>

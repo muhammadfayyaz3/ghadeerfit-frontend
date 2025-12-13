@@ -22,7 +22,7 @@ export default function NotificationDetailPage({
   params: { id: string };
 }) {
   const { t, i18n } = useTranslation();
-  const locale = i18n.language || 'en';
+  const locale = i18n.language || 'ar';
   const router = useRouter();
   const { data: notification, isLoading } = useQuery({
     queryKey: ['notification', params.id],

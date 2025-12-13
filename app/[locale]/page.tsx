@@ -129,7 +129,7 @@ export default function Home() {
             {[...Array(8)].map((_, i) => (
               <div
                 key={i}
-                className="h-48 md:h-64 bg-muted rounded-lg animate-pulse"
+                className="h-48 md:h-64 bg-[#f5e1e0] rounded-lg animate-pulse"
               />
             ))}
           </div>
