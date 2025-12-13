@@ -45,7 +45,7 @@ export default function BannerCarousel({ banners }: BannerCarouselProps) {
   const currentBanner = banners[currentIndex];
 
   return (
-    <div className="relative w-full h-48 md:h-64 lg:h-80 bg-gradient-to-r from-sky-400 to-blue-500 overflow-hidden">
+    <div className="relative w-full h-48 md:h-64 lg:h-80 bg-[#f5e1e0] overflow-hidden">
       {/* Banner Image */}
       <div 
         className={`relative w-full h-full ${currentBanner.link_url ? 'cursor-pointer' : ''}`}
